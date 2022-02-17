@@ -1,0 +1,22 @@
+@model LoginUser
+
+@* LOGIN *@
+
+<div class="column">
+    <h3 class="text-center">Login</h3>
+    <hr>
+    <form asp-controller="Home" asp-action="Login" method="post">
+        <div class="form-group">
+            <label asp-for="LoginEmail"></label>
+            <span class="text-danger font-weight-bold" asp-validation-for="LoginEmail"></span>
+            <input class="form-control" asp-for="LoginEmail"/>
+        </div> 
+        <div class="form-group">
+            <label asp-for="LoginPassword"></label>
+            <span class="text-danger font-weight-bold" asp-validation-for="LoginPassword"></span>
+            @* prefill password for testing for easy login: value ="something" *@
+            <input class="form-control" asp-for="LoginPassword" />
+        </div>
+        <button class="btn btn-outline-success">Login</button>
+    </form>
+</div>
